@@ -1,0 +1,10 @@
+{
+  "_template": "gh:cjolowicz/cookiecutter-hypermodern-python",
+  "author": "Thomas D.",
+  "email": "asteroide@domtombox.net",
+  "friendly_name": "Hello Garden",
+  "github_user": "asteroide",
+  "package_name": "hello_garden",
+  "project_name": "hello-garden",
+  "version": "0.0.1"
+}

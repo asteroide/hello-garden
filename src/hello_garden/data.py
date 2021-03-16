@@ -2,6 +2,7 @@ import yaml
 import datetime
 from datetime import timedelta
 
+
 def __add_timedelta(current, delta):
     print(f"__add_timedelta({current} , {delta})")
     __delta = None
@@ -11,7 +12,8 @@ def __add_timedelta(current, delta):
         __delta = timedelta(days=int(delta.replace("d", "")))
     else:
         __delta = timedelta(days=int(delta.replace("d", "")))
-    return current+__delta
+    return current + __delta
+
 
 def update(data):
     for section in data['garden']:
@@ -19,7 +21,6 @@ def update(data):
             try:
                 for vege in data['garden'][key_s]:
                     for key_v in vege.keys():
-                        #for vege_item in vege[key_v]:
                         if 'duration' in vege[key_v]['date']:
                             try:
                                 print(vege, key_v)
@@ -31,7 +32,6 @@ def update(data):
                             vege[key_v]['date']['end'] = __add_timedelta(vege[key_v]['date']['start'], vege[key_v]['date']['end'])
                         if type(vege[key_v]['date']['start']) is not datetime.date:
                             vege[key_v]['date']['start'] = vege[key_v]['date']['start']['date']['end']
-                        #print(vege_item)
             except TypeError:
                 pass
 

@@ -11,6 +11,8 @@ from hello_garden import data
 @click.option("--debug/--no-debug", help="Debug mode", default=False)
 def main(datafilename, database, debug) -> None:
     """Hello Garden."""
+    if not datafilename:
+        return
     data_items = data.get_data(datafilename)
     server.run(debug=debug, data=data_items, database=database)
 

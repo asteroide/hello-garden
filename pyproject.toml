@@ -28,7 +28,7 @@ pandas = "^1.2.3"
 pytest = "^6.2.2"
 coverage = {extras = ["toml"], version = "^5.4"}
 safety = "^1.10.3"
-mypy = "^0.800"
+mypy = "^0.981"
 typeguard = "^2.10.0"
 xdoctest = {extras = ["colors"], version = "^0.15.3"}
 sphinx = "^3.4.3"
